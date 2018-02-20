@@ -218,11 +218,11 @@ snippet hash
 	Hash.new { |${1:hash}, ${2:key}| $1[$2] = ${0} }
 snippet file File.foreach() { |line| .. }
 	File.foreach(${1:'path/to/file'}) { |${2:line}| ${0} }
-snippet file File.read()
+snippet file1 File.read()
 	File.read(${1:'path/to/file'})
 snippet Dir Dir.global() { |file| .. }
 	Dir.glob(${1:'dir/glob/*'}) { |${2:file}| ${0} }
-snippet Dir Dir[".."]
+snippet Dir1 Dir[".."]
 	Dir[${1:'glob/**/*.rb'}]
 snippet dir
 	Filename.dirname(__FILE__)
@@ -256,7 +256,7 @@ snippet eab
 	each_byte { |${1:byte}| ${0} }
 snippet eac- each_char { |chr| .. }
 	each_char { |${1:chr}| ${0} }
-snippet eac- each_cons(..) { |group| .. }
+snippet eac-1 each_cons(..) { |group| .. }
 	each_cons(${1:2}) { |${2:group}| ${0} }
 snippet eai
 	each_index { |${1:i}| ${0} }
@@ -500,7 +500,7 @@ snippet asrt
 	assert_respond_to ${1:object}, :${2:method}
 snippet ass assert_same(..)
 	assert_same ${1:expected}, ${2:actual}
-snippet ass assert_send(..)
+snippet ass1 assert_send(..)
 	assert_send [${1:object}, :${2:message}, ${3:args}]
 snippet asns
 	assert_not_same ${1:unexpected}, ${2:actual}
